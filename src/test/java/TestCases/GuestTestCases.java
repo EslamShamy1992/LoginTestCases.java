@@ -14,7 +14,7 @@ GuestPage guest;
     public void Enter_As_Guest(){
         login= new LoginScreen(driver);
         guest= new GuestPage(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         login.Click_on_Enter_As_Guest();
         guest.Click_On_Skip_Tutorial();

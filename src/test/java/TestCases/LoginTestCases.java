@@ -16,7 +16,7 @@ public class LoginTestCases extends BaseTest {
     public void Login_with_invalid_Verification_Number(){
 
         login= new LoginScreen(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         login.Enter_Phone_Number("01006838663");
        WebElement signin= login.SignIn_Button();
@@ -29,7 +29,7 @@ public class LoginTestCases extends BaseTest {
     @Test
     public void Login_With_Invalid_phone_Number(){
         login= new LoginScreen(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         login.Enter_Phone_Number("00000000000");
         login.SignIn_Button();
@@ -40,7 +40,7 @@ public class LoginTestCases extends BaseTest {
     @Test
     public void Login_With_Valid_Phone_Number(){
         login= new LoginScreen(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         login.Enter_Phone_Number("01006838663");
         WebElement signin=login.SignIn_Button();
@@ -55,7 +55,7 @@ public class LoginTestCases extends BaseTest {
     @Test
     public void Login_With_Empty_phone_number_Field(){
         login= new LoginScreen(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
        WebElement Sign_in = login.SignIn_Button();
               Sign_in.click();
@@ -66,7 +66,7 @@ public class LoginTestCases extends BaseTest {
     @Test
     public void Login_with_Google(){ //BLOCKED
         login= new LoginScreen(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         login.Click_on_google_button();
         login.Click_on_Eslam_account();

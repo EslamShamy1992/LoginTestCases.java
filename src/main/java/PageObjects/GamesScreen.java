@@ -15,6 +15,8 @@ public class GamesScreen extends BasePage {
 
     @FindBy(id = "com.gt.pi:id/mission_rewards_iv")
     private WebElement RewardBox;
+    @FindBy(id = "com.gt.pi:id/sideMenuIV")
+    private WebElement Menu;
     public void Skip_Games_Tutorial(){
 
         SkipTutorialGames.click();
@@ -23,4 +25,11 @@ public class GamesScreen extends BasePage {
     public WebElement Reward_Box(){
         return RewardBox;
     }
+    public WebElement Menu(){
+        return Menu;
+    }
+    public WebElement TutorialGames(){
+        return SkipTutorialGames;
+    }
 }
+

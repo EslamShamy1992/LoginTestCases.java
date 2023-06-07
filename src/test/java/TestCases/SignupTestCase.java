@@ -12,8 +12,8 @@ public class SignupTestCase extends BaseTest {
     @Test(priority = 2)
     public void Signup_With_invalid_number(){
         login = new LoginScreen(driver);
-       // signup = new SignupScreen(driver);
-        login.Click_On_Allow();
+        signup = new SignupScreen(driver);
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
        signup=   login.Click_on_Sign_Up_Button();
         signup.Enter_Email("nada@gmail.com");
@@ -26,8 +26,8 @@ public class SignupTestCase extends BaseTest {
     @Test(priority = 3)
     public void Signup_With_invalid_Mail(){
         login = new LoginScreen(driver);
-       // signup = new SignupScreen(driver);
-        login.Click_On_Allow();
+        //signup = new SignupScreen(driver);
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         signup=login.Click_on_Sign_Up_Button();
         signup.Enter_Email("nada@.com");
@@ -40,8 +40,8 @@ public class SignupTestCase extends BaseTest {
     @Test(priority = 4)
     public void Signup_With_leaving_CheckBox(){
         login = new LoginScreen(driver);
-        //signup = new SignupScreen(driver);
-        login.Click_On_Allow();
+       //signup = new SignupScreen(driver);
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         signup= login.Click_on_Sign_Up_Button();
         signup.Enter_Email("nada@gmail.com");
@@ -53,8 +53,6 @@ public class SignupTestCase extends BaseTest {
     @Test(priority = 1)
     public void Valid_signup(){
         login = new LoginScreen(driver);
-       // signup = new SignupScreen(driver);
-        login.Click_On_Allow();
         login.Click_On_Session_Button();
        signup= login.Click_on_Sign_Up_Button();
         signup.Enter_Email("eslam_shamy@hotmail.com");
@@ -69,7 +67,7 @@ public class SignupTestCase extends BaseTest {
     public void Open_Terms_Condition(){
         login= new LoginScreen(driver);
        // signup = new SignupScreen(driver);
-        login.Click_On_Allow();
+        //login.Click_On_Allow();
         login.Click_On_Session_Button();
         signup=login.Click_on_Sign_Up_Button();
         signup.Terms_And_Condition();

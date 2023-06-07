@@ -18,7 +18,7 @@ public class BaseTest {
     public void Launch_Playit_Android() throws MalformedURLException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"R58R763YMLK");
+        caps.setCapability(MobileCapabilityType.DEVICE_NAME,"AFMEUT1B15004272");
         caps.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         caps.setCapability("appActivity","com.gt.pi.ui.main.MainActivity");
         caps.setCapability("appPackage","com.gt.pi");
