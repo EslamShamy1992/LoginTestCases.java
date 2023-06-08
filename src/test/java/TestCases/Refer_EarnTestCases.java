@@ -31,10 +31,11 @@ public class Refer_EarnTestCases extends BaseTest {
         game.Skip_Games_Tutorial();
       game.Menu().click();
         refer.Click_on_Refer_and_earn();
-boolean X = refer.Refer_Code().isDisplayed();
-boolean Y = refer.Whatsapp().isDisplayed();
-soft.assertTrue(X,"First assertion");
-soft.assertTrue(Y,"Seconde Assertion");
+        boolean X = refer.Refer_Code().isDisplayed();
+        boolean Y = refer.Whatsapp().isDisplayed();
+        soft.assertTrue(X,"First assertion");
+        soft.assertTrue(Y,"Seconde Assertion");
+
     }
 
     @Test
