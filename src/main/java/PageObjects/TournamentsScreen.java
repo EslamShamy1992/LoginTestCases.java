@@ -27,26 +27,22 @@ public class TournamentsScreen extends BasePage {
     @FindBy(id = "com.gt.pi:id/tv_create")
     private WebElement CreateButton;
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[4]")
-private WebElement BubbleShooter;
+    private WebElement BubbleShooter;
     @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[1]")
-private WebElement SelectTime;
-@FindBy(id = "com.gt.pi:id/mainBackIV")
-private WebElement Back;
+    private WebElement SelectTime;
+    @FindBy(id = "com.gt.pi:id/mainBackIV")
+    private WebElement Back;
 
-@FindBy(id = "com.gt.pi:id/userTournamentNameTV")
-private WebElement NameOfTournamentS;
-@FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup[2]/android.widget.FrameLayout[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup")
-private WebElement testtournament;
-@FindBy(id = "com.gt.pi:id/delete_tournament_btn")
-private WebElement DeleteIcon;
-@FindBy(id = "com.gt.pi:id/tv_delete")
-private WebElement delete;
-@FindBy(id = "com.gt.pi:id/noTournaments")
-private WebElement NoTournamentsmessage;
-
-
-
-
+    @FindBy(id = "com.gt.pi:id/userTournamentNameTV")
+    private WebElement NameOfTournamentS;
+    @FindBy(xpath = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.view.ViewGroup[2]/android.widget.FrameLayout[2]/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup")
+    private WebElement testtournament;
+    @FindBy(id = "com.gt.pi:id/delete_tournament_btn")
+    private WebElement DeleteIcon;
+    @FindBy(id = "com.gt.pi:id/tv_delete")
+    private WebElement delete;
+    @FindBy(id = "com.gt.pi:id/noTournaments")
+    private WebElement NoTournamentsmessage;
 
 
     public void ClickOnTournamentsTab() {
@@ -67,7 +63,7 @@ private WebElement NoTournamentsmessage;
 
     public void ClickOnSelectGame() {
         SelectGame.click();
-      BubbleShooter.click();
+        BubbleShooter.click();
     }
 
     public void EnterTournamentName(String name) {
@@ -76,35 +72,36 @@ private WebElement NoTournamentsmessage;
 
     public void GameTime() {
         Time.click();
-SelectTime.click();
+        SelectTime.click();
     }
 
     public void ClickOnCreateButton() {
         CreateButton.click();
     }
 
- public void ClickOnBack(){
+    public void ClickOnBack() {
         Back.click();
- }
-public WebElement NameOfTournament(){
-    return  NameOfTournamentS;
-}
-public void ClickOnTestTournament(){
+    }
+
+    public WebElement NameOfTournament() {
+        return NameOfTournamentS;
+    }
+
+    public void ClickOnTestTournament() {
         testtournament.click();
-}
-public void ClickOnDeleteButton(){
+    }
+
+    public void ClickOnDeleteButton() {
         DeleteIcon.click();
-}
-public void Clickdelete(){
+    }
+
+    public void Clickdelete() {
         delete.click();
-}
-public WebElement NoTournaments(){
+    }
+
+    public WebElement NoTournaments() {
         return NoTournamentsmessage;
-}
-
-
-
-
+    }
 
 
 }
