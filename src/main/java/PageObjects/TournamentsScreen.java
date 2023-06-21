@@ -43,14 +43,27 @@ public class TournamentsScreen extends BasePage {
     private WebElement delete;
     @FindBy(id = "com.gt.pi:id/noTournaments")
     private WebElement NoTournamentsmessage;
+    @FindBy(id = "com.gt.pi:id/share_tournament_btn")
+    private WebElement ShareButton;
+    @FindBy(id = "com.gt.pi:id/text_copy_referal_code")
+    private WebElement Code;
+
+    @FindBy(id = "com.gt.pi:id/btn_close_dialog")
+    private WebElement CloseCopyCode;
+
+    @FindBy(id = "com.gt.pi:id/joinTournamentBtn")
+    private WebElement JoinButton;
+    @FindBy(id = "com.gt.pi:id/tournamentCodeTV")
+    private WebElement EnterCode;
+
+    @FindBy(id = "com.gt.pi:id/joinTV")
+    private WebElement JoinTournament;
+    @FindBy(id = "com.gt.pi:id/text_message_")
+    private WebElement IncorrectCodeMessage;
 
 
     public void ClickOnTournamentsTab() {
         Tournaments_Tab.click();
-    }
-
-    public void ClickOnYourTournaments_Tab() {
-        YourTournamentsTab.click();
     }
 
     public void ClickOnYourTournamentsTab() {
@@ -101,6 +114,34 @@ public class TournamentsScreen extends BasePage {
 
     public WebElement NoTournaments() {
         return NoTournamentsmessage;
+    }
+
+    public void ClickOnShareButton() {
+        ShareButton.click();
+    }
+
+    public WebElement Code() {
+        return Code;
+    }
+
+    public void ClickCloseCode() {
+        CloseCopyCode.click();
+    }
+
+    public void ClickOnJoinButton() {
+        JoinButton.click();
+    }
+
+    public WebElement EnterCode() {
+        return EnterCode;
+    }
+
+    public void ClickOnJoinTournament() {
+        JoinTournament.click();
+    }
+
+    public WebElement IncorrectCodeMessagE() {
+        return IncorrectCodeMessage;
     }
 
 

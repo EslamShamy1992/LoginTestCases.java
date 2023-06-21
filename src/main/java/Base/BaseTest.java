@@ -3,6 +3,7 @@ package Base;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,9 +14,9 @@ import java.time.Duration;
 
 public class BaseTest {
 
-     public AndroidDriver driver;
+      AndroidDriver driver;
     @BeforeMethod
-    public void Launch_Playit_Android() throws MalformedURLException {
+    public void Launch_Playit_Android() throws MalformedURLException, InterruptedException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,"AFMEUT1B15004272");
@@ -24,10 +25,11 @@ public class BaseTest {
         caps.setCapability("appPackage","com.gt.pi");
         driver= new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),caps);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(9000));
+        Thread.sleep(9000);
     }
 
-   /* @AfterMethod
+   @AfterMethod
     public void tearDown(){
         driver.quit();
-    }*/
+    }
 }

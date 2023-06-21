@@ -3,6 +3,7 @@ package TestCases;
 import Base.BaseTest;
 import PageObjects.GamesScreen;
 import PageObjects.LoginScreen;
+import Utils.ConfigUtils;
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -18,7 +19,7 @@ public class LoginTestCases extends BaseTest {
         login= new LoginScreen(driver);
         //login.Click_On_Allow();
         login.Click_On_Session_Button();
-        login.Enter_Phone_Number("01006838663");
+        login.Enter_Phone_Number(ConfigUtils.getInstance().getPhoneNumber());
        WebElement signin= login.SignIn_Button();
         signin.click();
         login.Enter_Verification_code("123456");
@@ -42,7 +43,7 @@ public class LoginTestCases extends BaseTest {
         login= new LoginScreen(driver);
         //login.Click_On_Allow();
         login.Click_On_Session_Button();
-        login.Enter_Phone_Number("01006838663");
+        login.Enter_Phone_Number(ConfigUtils.getInstance().getPhoneNumber());
         WebElement signin=login.SignIn_Button();
         signin.click();
         login.Enter_Verification_code("115599");
@@ -63,14 +64,14 @@ public class LoginTestCases extends BaseTest {
         Assert.assertTrue(X);
     }
 
-    @Test
+    /*@Test
     public void Login_with_Google(){ //BLOCKED
         login= new LoginScreen(driver);
         //login.Click_On_Allow();
         login.Click_On_Session_Button();
         login.Click_on_google_button();
         login.Click_on_Eslam_account();
-    }
+    }*/
 
 
 }
